@@ -94,7 +94,7 @@ class Agent:
             if rescaled_v[i] < min_val: min_val = rescaled_v[i]
 
         if max_val > 1e8:
-            print "warning: max_val exceeds 1e8 : ", max_val
+            print("warning: max_val exceeds 1e8 : ", max_val)
 
         # rescale and clip if needed
         if min_val < -595.0 or max_val > 595.0:

@@ -6,7 +6,7 @@
 # Released under GNU GPLv3
 #
 
-from Agent import Agent
+from .Agent import Agent
 
 from random import randint, randrange, random
 
@@ -38,8 +38,8 @@ class HLQ_l(Agent):
             self.gamma = gamma
 
         if self.gamma >= 1.0:
-            print "Error: HLQ learning can only handle an internal discount rate ", \
-                  "that is below 1.0"
+            print("Error: HLQ learning can only handle an internal discount rate ", \
+                  "that is below 1.0")
             sys.exit()
 
         self.reset()

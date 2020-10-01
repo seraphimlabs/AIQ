@@ -9,11 +9,11 @@
 import random
 import sys
 
-from ReferenceMachine import *
+from .ReferenceMachine import *
 
 from numpy import zeros, ones, array, linspace
 from scipy import stats, floor, sqrt
-from string import replace
+#from string import replace
 
 
 INSTRUCTIONS = ['<','>','+','-',',','.','[',']','#', '%' ]
@@ -223,7 +223,7 @@ class BF(ReferenceMachine):
                 self.cycle_end = True
 
             else:
-                print "Error: Unknown instruction ", instr
+                print("Error: Unknown instruction ", instr)
                 self.cycle_end = True
 
             instr_ptr += 1
@@ -254,7 +254,4 @@ class BF(ReferenceMachine):
         program = replace(program,'[]','')
 
         return program
-
-
-
 
